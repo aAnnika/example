@@ -1,0 +1,178 @@
+:root {
+    --primary-color:#4DB6AC; /* цвет фона */
+    --secondary-color:#009688; /* цвет меню */
+    --card-color:#B2DFDB; /* цвет карточек */
+    --active-color:#00695C; /* цвет активной кнопки */
+    --hover-menu-color:#004D40; /* цвет при наведении */
+}
+
+
+/* Стили для активной кнопки */
+.nav-pills .nav-link.active {
+    background-color: var(--active-color);  /* Темный оттенок teal */
+    color: white !important;  /* Белый текст */
+}
+
+/* Кастомный стиль при наведении */
+.nav-pills .nav-link:hover {
+    background-color: var(--hover-menu-color);  /* Более темный оттенок teal */
+    color: white;
+}
+
+/* Устанавливаем черный цвет для неактивных кнопок */
+.nav-pills .nav-link {
+    color: black;
+}
+
+.nav {
+    display:flex;
+    justify-content: space-around;
+}
+
+div.card-body {
+    background-color:var(--card-color);
+}
+
+.down {
+    padding:30px 0px;
+    background-color:#414542;
+}
+
+.list-group-item{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-color:#414542;
+    background-color:#414542;
+    color: white;
+    font-size:22px;
+
+}
+main {
+    min-height: calc(100vh - 150px);
+}
+.first {
+    border-left: 5px solid var(--secondary-color);
+}
+
+.carousel {
+    width: 60%;  /* Измените на нужное значение */
+    height: 300px;  /* Установите нужную высоту */
+}
+
+.carousel img {
+    object-fit: cover;  /* Обрезка изображений по размеру контейнера */
+    height: 100%;
+}
+
+/* Центрирование кнопок карусели */
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50% !important;           /* Центрируем по вертикали */
+    transform: translateY(-50%);  /* Сдвигаем на половину высоты */
+    color:black;
+}
+.footer {
+    position:relative;
+    bottom: 0;
+    width: 100%;
+}
+.carousel img {
+    width: 100%;
+    height: 400px;  /* Задайте желаемую высоту */
+    object-fit: cover;  /* Обрезка для равномерности */
+}
+
+.p-gallery {
+    background-color:var(--primary-color);
+    color:white;
+    height:40px;
+    text-align: center; /* Выравнивание текста по центру */
+    width: 100%; /* Ширина абзаца будет равна ширине родителя */
+    margin: 0 auto; /* Центрирование */
+    font-size: 18px; /* Опционально: настройка размера шрифта */
+    font-weight: bold; /* Опционально: стиль шрифта */
+    margin-bottom:5px;
+    margin-top:15px;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner {
+        width:100%; /* Ограничим высоту каруселей на мобильных устройствах */
+        height:auto;
+        object-fit: contain;
+    }
+
+    .col-md-6 {
+        margin-bottom: 20px; /* Увеличим отступы между каруселями */
+    }
+
+    .p-gallery {
+        font-size: 1.2rem; /* Меньший размер шрифта для мобильных устройств */
+    }
+}
+@media (min-width: 768px) {
+    .carousel-item img {
+        width: 100%;
+        height: 400px; /* Устанавливаем фиксированную высоту для десктопа */
+        object-fit: cover; /* Чтобы изображения не деформировались */
+    }
+}
+
+.d-block {
+    margin-bottom:15px !important;
+}
+
+
+
+
+
+
+
+/* Для колонок, которые содержат карусель */
+.col-md-6 {
+    padding-left: 0 !important; /* Убираем отступы слева */
+    padding-right: 0 !important; /* Убираем отступы справа */
+}
+
+/* Для контейнера с каруселью */
+.carousel {
+    padding: 20px !important; /* Добавляем внутренние отступы */
+}
+
+/* Убираем нежелательные внешние отступы */
+.carousel-item {
+    margin-bottom: 20px !important; /* Добавляем отступ снизу */
+}
+
+/* Стиль для текста в карусели */
+.p-gallery {
+    font-size: 1.5rem; /* Размер текста */
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    padding: 10px 0;
+    z-index: 10; /* Обеспечиваем, чтобы текст был сверху */
+}
+
+/* Убедимся, что картинки не обрезаются */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Изображения не обрезаются */
+}
+
+/* Для мобильных устройств */
+@media (max-width: 767px) {
+    .col-md-6 {
+        margin-bottom: 20px !important; /* Отступ снизу */
+    }
+
+    .p-gallery {
+        font-size: 1rem; /* Меньший размер текста */
+        padding: 5px 0;
+    }
+
+    .carousel-item {
+        margin-bottom: 15px;
+    }
+}
